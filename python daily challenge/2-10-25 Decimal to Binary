@@ -1,0 +1,6 @@
+def to_binary(decimal):
+    remainder = ""
+    while decimal > 0:
+        remainder = str((decimal % 2)) + remainder
+        decimal //= 2
+    return remainder
