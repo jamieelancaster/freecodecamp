@@ -1,0 +1,21 @@
+def check_strength(password):
+    rules = 0
+    if len(password) > 7:
+        print("len")
+        rules+= 1
+    if (not (password.lower() == password)) and (not (password.upper() == password)):
+        print("cases")
+        rules += 1
+    temp_password = ''.join([char for char in password if char.isalnum()])
+    if not (temp_password.isnumeric()) and (not temp_password.isalpha()):
+        print("alpha numeric")
+        rules += 1
+    if not password.isalnum():
+        print("special")
+        rules += 1
+    if rules < 2:
+        return "weak"
+    elif rules < 4:
+        return "medium"
+    else:
+        return "strong"
