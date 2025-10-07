@@ -1,0 +1,16 @@
+def classification(temp):
+    if temp < 3700:
+        classification = "M"
+    elif temp < 5200:
+        classification = "K"
+    elif temp < 6000:
+        classification = "G"
+    elif temp < 7500:
+        classification = "F"
+    elif temp < 10000:
+        classification = "A"
+    elif temp < 30000:
+        classification = "B"
+    else:
+        classification = "O"
+    return classification
