@@ -1,0 +1,4 @@
+def send_message(route):
+    dist = sum(route)
+    time = round((dist / 300000) + 0.5*(len(route)-1), 4)
+    return time
