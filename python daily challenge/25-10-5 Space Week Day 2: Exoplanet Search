@@ -1,10 +1,7 @@
 def has_exoplanet(readings):
-    clean_readings = ",".join([str(int(char, 36)) for char in readings])
-    clean_readings = clean_readings.split(",")
-    clean_readings = [int(x) for x in clean_readings]
+    clean_readings = [int(char, 36) for char in readings]
     clean_readings = sorted(clean_readings)
     avg = sum(clean_readings)/len(clean_readings)
-
     if clean_readings[0] <= 0.8*avg:
         return True
     else:
